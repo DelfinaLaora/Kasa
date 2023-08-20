@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+:root {
+  --color-primary: #FF6060;
+  --color-secondary: #000000;
+  --color-tertiary: #F6F6F6;
+  --color-quaternary: #ffffff;
+}
+
+/*reset CSS afin de réinitialiser les données dans les différents navigateurs*//*# sourceMappingURL=style.css.map */

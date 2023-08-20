@@ -1,0 +1,22 @@
+// Rouge
+:root {
+    --color-primary: #FF6060;
+    --color-secondary: #000000;
+    --color-tertiary: #F6F6F6;
+    --color-quaternary: #ffffff;
+}
+
+$breakpoints: (desktop: 1025px,
+               tablet: 769px);
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
