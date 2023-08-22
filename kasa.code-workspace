@@ -4,24 +4,5 @@
 			"path": "."
 		}
 	],
-	"settings": {
-		"liveSassCompile.settings.formats": [
-
-			{
-            "format": "compressed",
-            "extensionName": ".min.css",
-            "savePath": "~/../css/",
-            "savePathReplacementPairs": null
-        },
-
-
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "~/../css/",
-            "savePathReplacementPairs": null
-        }
-        ],
-        "liveServer.settings.port": 5504
-	}
+	"settings": {}
 }

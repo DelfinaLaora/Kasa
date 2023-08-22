@@ -8,4 +8,11 @@
   --color-quaternary: #ffffff;
 }
 
-/*reset CSS afin de réinitialiser les données dans les différents navigateurs*//*# sourceMappingURL=style.css.map */
+/*reset CSS afin de réinitialiser les données dans les différents navigateurs*/
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-container h1 {
+  color: rgb(64, 0, 255);
+}/*# sourceMappingURL=style.css.map */
