@@ -1,0 +1,75 @@
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    background-color: (var(--color-quaternary));
+    border: 2px solid rgb(228, 10, 235);
+}
+
+header, main{
+    width: 90%;
+    margin: auto;
+    
+}
+
+header {
+    border: 2px solid rgb(17, 235, 10);
+}
+ main{
+    border: 2px solid rgb(235, 224, 10);
+ }
+
+
+h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: (var(--color-tertiary));
+}
+
+h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 300; 
+    color: (var(--color-quaternary));
+}
+
+h3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: (var(--color-primary));
+}
+
+h4 {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+p {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;  
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+span {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 500; 
+    color: (var(--color-quaternary));
+}
+
+li{
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: (var(--color-primary));
+  }

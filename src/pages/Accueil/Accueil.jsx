@@ -1,14 +1,19 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import Logements from "./../Logements/Logements";
+import CardLogements from "./CardLogements";
+import ImageAccueil from "../../components/ImageAccueil/ImageAccueil";
+import Footer from "../../components/Footer/Footer";
 
 // const Accueil = () => {
     function Accueil(){
     return(
         <div>
             <Header />
-            je vais apprendre react
-            <Logements />
+            <main>
+                <ImageAccueil />               
+                <CardLogements />
+            </main>
+            <Footer/>
         </div>
     );
 };

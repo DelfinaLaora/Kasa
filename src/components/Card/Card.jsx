@@ -1,11 +1,11 @@
 import PropTypes from "prop-types"
 
 function Card({picture, title}) {
-    return (
-        <div>
+    return (        
+        <>
             <img src={picture} alt="logement"/>
             <h2>{title}</h2>
-        </div>
+        </>        
     )
 }
 
@@ -15,3 +15,4 @@ Card.propTypes = {
 }
 
 export default Card
+
