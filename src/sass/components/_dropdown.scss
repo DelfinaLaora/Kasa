@@ -1,0 +1,106 @@
+.contener-dropdown-logement, .contener-dropdown-a-propos {
+    margin: auto;
+    margin-bottom: 20px;
+    // border: 2px solid rgb(166, 224, 143);
+
+    .dropdown {  
+        .onglet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 52px;
+            border-radius: 10px;
+            background-color: (var(--color-primary));
+            padding-left: 10px;
+            padding-right: 10px;
+            cursor: pointer;
+            // border: 2px solid rgb(15, 35, 18);
+            
+            span{
+                margin-top: 0px;
+                }
+  
+            img{
+                width: 30px;
+                height: 20px;
+            }
+            
+        }
+  
+        .collapse {
+            line-height: 25.67px;
+            padding-left: 20px;
+            background: (var(--color-tertiary));
+            max-height: 0;
+            border-radius: 0px 0px 10px 10px;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+
+            // border: 2px solid rgb(243, 14, 239);
+
+            p{
+                font-size: 18px;
+                font-weight: 400;
+                color: (var(--color-primary));
+            }
+        }
+    }
+  }
+                 
+.rotate{
+    transform: rotate(180deg);
+}
+  
+// .arrow{
+//     transition: transform 1s;
+//     transform: rotate(180deg); 
+// }
+.contener-dropdown-a-propos {
+    width: 90%;
+    margin: auto;
+//   border: 2px solid red;
+
+    .dropdown {
+        width: 100%;
+        margin: auto;
+        //   border: 2px solid rgb(0, 17, 255);
+        
+        .onglet {
+            width:80%;
+            margin: auto;
+            // border: 2px solid rgb(7, 163, 33);
+        }
+
+        .collapse {
+            width:80%;       
+            margin-bottom: 20px;
+            margin-left: 10%;
+            // border: 2px solid rgb(17, 255, 0);
+        }
+    }
+}
+
+.contener-dropdown-logement {
+    display: flex;
+    justify-content: space-between;  
+    width: 90%;
+    
+    @include tablet {
+        flex-direction: column;
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        // border: 2px solid rgb(205, 81, 95);
+       
+        .onglet {
+            width: 582px;
+            // border: 2px solid rgb(17, 14, 15);
+        }
+        
+        .collapse {    
+            width: 582px;               
+            padding-right: 20px;      
+    }}
+}

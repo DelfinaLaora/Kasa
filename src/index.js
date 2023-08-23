@@ -9,6 +9,8 @@ import Accueil from './../src/pages/Accueil/Accueil';
 // import Header from "./components/Header/Header";
 import Error from "./components/Error/Error";
 import Apropos from './pages/A-propos/Apropos';
+// import Footer from './components/Footer/Footer';
+import General from './pages/General/General';
 // import Logements from './pages/Logements/Logements';
 
 
@@ -17,17 +19,15 @@ root.render(
   <React.StrictMode>
     <Router>
       {/* <Header /> */}
-      <Routes>
-        <Route path="/Accueil" element={<Accueil />}/>
-         
-               
-        <Route path="/Apropos" element={<Apropos />}/>
-        {/* <Route path="/logements" element={<Logements />} /> */}
-        <Route path="*" element={<Error />}/>
-      
-         {/* <App /> */}
-         {/* <Accueil /> */}
-      </Routes>      
+        <Routes>
+          <Route path="/" element={<General />}>
+            <Route index element={<Accueil />}/>
+            <Route path="/Apropos" element={<Apropos />}/>
+            {/* <Route path="/logements" element={<Logements />} /> */}
+            <Route path="*" element={<Error />}/>
+         </Route>
+        </Routes>    
+      {/* <Footer />   */}
     </Router>
   </React.StrictMode>
 );

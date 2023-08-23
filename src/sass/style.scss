@@ -3,9 +3,11 @@
 @import "./Base/reset";
 @import "./Base/font";
 
-@import "./Components/header";
-@import "./Components/imageAccueil";
+@import "./Components/bannier";
 @import "./Components/cardLogements";
-@import "./Components/footer";
+@import "./Components/dropdown";
 
 @import "./Layout/general";
+@import "./Layout/header";
+@import "./Layout/a-propos";
+@import "./Layout/footer";

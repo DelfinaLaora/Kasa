@@ -1,16 +1,16 @@
 import React from "react";
-import Header from "../../components/Header/Header";
+import BannierAPropos from "../../components/BannierAPropos/BannierAPropos";
+import DropDown from "../../components/DropDown/DropDown";
+
 
 function Apropos () {
     return(
-        <>
-        <Header />
-        <div className="header-container">
-            <h1>A propos</h1>
-        </div>
-        <h2>Mon test</h2>
-        </>
-    );
+        <div>
+            <BannierAPropos />  
+            <DropDown />  
+        </div>   
+    )
 };
 
 export default Apropos;
+
