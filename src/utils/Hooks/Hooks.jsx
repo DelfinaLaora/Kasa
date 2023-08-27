@@ -1,10 +1,14 @@
 import {useState, useEffect} from 'react'
+// import { useParams } from 'react-router-dom'
+
 
 export function useFetch(url){
     const [data, setData] = useState([])
     const [error, setError] = useState(false)
+    // const [id, setId] = useState()
+    // const [state, setState] = useState()
     // const [isLoading, setLoading] = useState(true)
-
+    // const { id } = useParams()
 useEffect(() => {
 
     if(!url) return
@@ -13,10 +17,14 @@ useEffect(() => {
             const response = await fetch(url)
             // parser ce qui est retourné avec data.json()
             const data = await response.json()
+            // const jsonResponse = state({id})
+            // const {id} = props
             // state interne qui lui permet de stocker la data, 
             // et de savoir si la data est en train de charger 
             // avec isLoading
             setData(data)
+            // setId(data.id)
+            // setState(jsonResponse)
             // changer l’état de isLoading
             // setLoading(false)            
         }catch(err){
@@ -37,6 +45,16 @@ useEffect(() => {
 return {data, error}
 }
 
+
+
+
+
+
+
+
+
+
+
 // function useFetch(){
 //     const getData = () => {
 //         fetch(`http://localhost:3000/annoncesLogements.json`)
@@ -50,5 +68,4 @@ return {data, error}
 //         <div>
 
 //         </div>
-//     )
-// }
+//     })

@@ -1,13 +1,12 @@
 import React from "react";
 import BannierAPropos from "../../components/BannierAPropos/BannierAPropos";
-import DropDown from "../../components/DropDown/DropDown";
-
+import DropDownApropos from "../../components/DropDown/DropDownAPropos";
 
 function Apropos () {
     return(
         <div>
             <BannierAPropos />  
-            <DropDown />  
+            <DropDownApropos />  
         </div>   
     )
 };

@@ -1,5 +1,6 @@
 body {
     width: 100%;
+    margin: auto;
     display: flex;
     justify-content: center; 
     background-color: (var(--color-quaternary));
@@ -16,6 +17,7 @@ header {
     border: 2px solid rgb(17, 235, 10);
 }
  main{
+    // width: 100%;
     border: 2px solid rgb(235, 224, 10);
  }
 

@@ -7,17 +7,17 @@ import { Outlet } from "react-router-dom";
 
 
 // const Accueil = () => {
-    function General(){
+    function Root(){
     return(
         <div className="general">  
            <Header />
-            <main>
-                <Outlet />
-            </main>
+                <main>
+                    <Outlet />
+                </main>
             <Footer />
            
         </div>
     );
 };
 
-export default General;
+export default Root;

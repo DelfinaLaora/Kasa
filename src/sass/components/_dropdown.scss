@@ -1,6 +1,6 @@
 .contener-dropdown-logement, .contener-dropdown-a-propos {
     margin: auto;
-    margin-bottom: 20px;
+   
     // border: 2px solid rgb(166, 224, 143);
 
     .dropdown {  
@@ -30,11 +30,13 @@
         .collapse {
             line-height: 25.67px;
             padding-left: 20px;
+            margin: auto;
             background: (var(--color-tertiary));
-            max-height: 0;
+            //auto en CSS supprimerait l'animation
+            height: 0px;
             border-radius: 0px 0px 10px 10px;
             overflow: hidden;
-            transition: max-height 0.2s ease-out;
+            transition: height ease 0.9s;
 
             // border: 2px solid rgb(243, 14, 239);
 
@@ -57,17 +59,24 @@
 // }
 .contener-dropdown-a-propos {
     width: 90%;
+    // la hauteur bloc de déplacement des autres section lors de l'ouverture
+    // height: 450px;
+
     margin: auto;
+    padding-top: 10px;
 //   border: 2px solid red;
 
     .dropdown {
         width: 100%;
-        margin: auto;
+        margin: auto;  
+        margin-top: 50px;
+        margin-bottom: 80px;      
         //   border: 2px solid rgb(0, 17, 255);
         
         .onglet {
             width:80%;
             margin: auto;
+            margin-top: 30px;
             // border: 2px solid rgb(7, 163, 33);
         }
 
@@ -76,6 +85,11 @@
             margin-bottom: 20px;
             margin-left: 10%;
             // border: 2px solid rgb(17, 255, 0);
+            p{
+                font-size: 18px;
+                font-weight: 400;
+                color: (var(--color-primary));
+            }
         }
     }
 }
@@ -84,23 +98,26 @@
     display: flex;
     justify-content: space-between;  
     width: 90%;
-    
+    // border: 2px solid rgb(81, 205, 93);
     @include tablet {
         flex-direction: column;
     }
 
     .dropdown {
+        width: 48%;
         display: flex;
+        // align-items: space-around;
         flex-direction: column;
         // border: 2px solid rgb(205, 81, 95);
        
         .onglet {
-            width: 582px;
+            width: 100%;
+            // width: 582px;
             // border: 2px solid rgb(17, 14, 15);
         }
         
         .collapse {    
-            width: 582px;               
+            width: 100%;               
             padding-right: 20px;      
     }}
 }

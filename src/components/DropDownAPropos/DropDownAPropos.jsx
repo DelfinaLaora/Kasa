@@ -1,5 +1,5 @@
 import React from "react";
-import PropsDropDown from "./PropsPropDown";
+import PropsDropDownApropos from "./PropsDropDownAPropos";
 
 const description = [
     {        
@@ -20,13 +20,15 @@ const description = [
     },
 ]
 
-function DropDown() {
+function DropDownApropos() {
+   
     return(
         <div className="contener-dropdown-a-propos">
+           
             <article className="dropdown"> 
                 
                 {description.map((data, index) =>(
-                    <PropsDropDown
+                    <PropsDropDownApropos
                     key={`${data}.title}-${index}`}
                     title={data.title}
                     text={data.text}
@@ -37,4 +39,4 @@ function DropDown() {
     )
 };
 
-export default DropDown;
+export default DropDownApropos;
