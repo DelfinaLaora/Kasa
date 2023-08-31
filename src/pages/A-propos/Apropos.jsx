@@ -1,6 +1,6 @@
-import React from "react";
-import BannierAPropos from "../../components/BannierAPropos/BannierAPropos";
-import DropDownApropos from "../../components/DropDown/DropDownAPropos";
+import React from "react"
+import BannierAPropos from "../../components/BannierAPropos/BannierAPropos"
+import DropDownApropos from "../../components/DropDownAPropos/DropDownAPropos"
 
 function Apropos () {
     return(
@@ -9,7 +9,7 @@ function Apropos () {
             <DropDownApropos />  
         </div>   
     )
-};
+}
 
-export default Apropos;
+export default Apropos
 

@@ -6,9 +6,7 @@ function Bannier(){
             <div className='bannier'>
                 <div className='background'></div>
                 <img  src={imageAPropos} alt='Falaise'/>   
-            </div>
-        
-
+            </div>    
     )
 }
 

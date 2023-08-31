@@ -37,6 +37,6 @@ function DropDownApropos() {
             </article>            
         </div>
     )
-};
+}
 
-export default DropDownApropos;
+export default DropDownApropos
