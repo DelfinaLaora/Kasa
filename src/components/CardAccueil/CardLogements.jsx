@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 
 function CardLogement() {
     const {data, error} = useFetch(
-        `http://localhost:3000/annoncesLogements.json`
+        '/annoncesLogements.json'        
+        // `http://localhost:3000/annoncesLogements.json`
     )
    
     const logementsList = data   

@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center; 
     background-color: (var(--color-quaternary));
-    border: 2px solid rgb(228, 10, 235);
+    // border: 2px solid rgb(228, 10, 235);
 }
 
 header, main{
@@ -13,13 +13,13 @@ header, main{
     
 }
 
-header {
-    border: 2px solid rgb(17, 235, 10);
-}
- main{
-    // width: 100%;
-    border: 2px solid rgb(235, 224, 10);
- }
+// header {
+//     border: 2px solid rgb(17, 235, 10);
+// }
+//  main{
+//     // width: 100%;
+//     border: 2px solid rgb(235, 224, 10);
+//  }
 
 
 h1 {
