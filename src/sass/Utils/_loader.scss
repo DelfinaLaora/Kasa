@@ -1,3 +1,13 @@
+.loader {
+  padding: 10px;
+  border: 6px solid (var(--color-primary));
+  border-bottom-color: transparent;
+  border-radius: 22px;
+  animation: loader 1s infinite linear;
+  height: 0;
+  width: 0;
+}
+
 @keyframes loader {
   from {
     transform: rotate(0deg);
@@ -8,12 +18,3 @@
   }
 }
 
-.loader {
-  padding: 10px;
-  border: 6px solid (var(--color-quaternary));
-  border-bottom-color: transparent;
-  border-radius: 22px;
-  animation: loader 1s infinite linear;
-  height: 0;
-  width: 0;
-}

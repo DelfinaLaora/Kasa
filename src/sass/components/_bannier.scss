@@ -7,6 +7,12 @@
     margin-bottom: 20px;
     border-radius: 10px;
     position: relative;
+    // border: 2px solid red;
+    @include tablet {
+        width: 90%;
+        height: 111px;
+        margin-top: 10px;
+    }
 
     .background{
         position: absolute;
@@ -14,6 +20,9 @@
         height: 223px;
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 10px;  
+        @include tablet {
+            height: 111px;
+        }
     }
 
     img{
@@ -21,11 +30,22 @@
         height: 223px;
         object-fit: cover;
         border-radius: 10px;    
+        @include tablet {
+            height: 111px;
+        }
     }
 
     h1{
         position: absolute;
         top: 25%;
         left: 25%;
+        @include tablet {
+            top: 10%;
+            left: 5%;
+            width: 80%;
+            font-size: 24px;
+            font-weight: 500;
+            // border: 2px solid red;
+        }
     }
 }

@@ -3,7 +3,7 @@ import arrowDropDown from "../../assets/images/arrow.png"
 import {useState} from 'react'
 import { useRef } from "react";
 
-function PropsDropDownAPropos({title, text}) {
+function PropsDropDownAbout({title, text}) {
 
     const [open, setOpen] = useState(false)
     const [isActive, setIsActive] = useState(false)
@@ -35,9 +35,9 @@ function PropsDropDownAPropos({title, text}) {
     )
 }
 
-PropsDropDownAPropos.propTypes = {
+PropsDropDownAbout.propTypes = {
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
 }
 
-export default PropsDropDownAPropos
+export default PropsDropDownAbout

@@ -1,0 +1,189 @@
+.contener-logement{
+    width: 100%;
+    // border: 2px solid red;
+    .caroussel {
+        width: 90%;
+        height: 415px;
+        margin: auto;
+        position: relative;
+        // border: 2px solid red;
+        @include tablet {
+            width: 90%;
+            height: 255px;   
+            margin-top: 15px;         
+        }
+
+        .caroussel-img {
+            width: 100%;
+            height: 415px;
+            object-fit: cover;
+            border-radius: 10px;
+            // border: 2px solid rgb(0, 255, 42);
+            @include tablet {
+                height: 255px;
+                
+            }
+        }
+        .arrow {
+            display: flex;
+            justify-content: space-between;
+            width: 100%; 
+            position: absolute;
+            top:150px;
+            // border: 2px solid rgb(0, 30, 255);
+            @include tablet {
+                top:100px;
+                height: 30px;
+            }
+        }
+        .dots{
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            margin: auto;
+            top: 360px;            
+            color: (var(--color-quaternary));
+            // border: 2px solid rgb(251, 0, 255);
+
+            @include tablet {
+                top: 200px;
+            }
+        }
+    }
+
+    .card-contener-logement {
+        display: flex;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        // border: 2px solid rgb(4, 165, 143);
+
+        @include tablet {
+            flex-direction: column;
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 500;            
+            color: (var(--color-primary));
+            // border: 2px solid red;
+
+            @include tablet {
+                font-size: 18px;
+                margin: 0;
+            }
+        }
+        h3{
+            @include tablet {
+                font-size: 14px;
+                // border: 2px solid red;
+            }
+        }
+        
+        .tags{
+            display: flex;
+
+            div{                
+                display: flex;
+                align-items: center;
+                height: 25px;                
+                background-color: (var(--color-primary));
+                border-radius: 7px;
+                margin-right: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                // border: 2px solid rgb(13, 0, 255);
+                
+                @include tablet {
+                    height: 18px; 
+                    font-size: 10px;                                       
+                }
+            }
+            p{
+                white-space: nowrap;
+                color: (var(--color-quaternary));
+                border-radius: 10px;
+                // border: 2px solid rgb(13, 0, 255);
+
+                @include tablet {
+                    font-size: 10px;
+                }
+            }
+        } 
+        .lessor{
+            @include tablet {
+                display: flex;
+                flex-direction:row-reverse;
+                justify-content: space-between;
+                margin-top: 10px;;
+                // border: 2px solid red;
+            }
+
+        }
+        .host {
+            display: flex;
+            align-items: center;
+            width: 150px;
+            text-align: right;                        
+            // border: 2px solid rgb(242, 0, 255);
+            
+            @include tablet {
+                width: 100px;
+                height: 50px;
+                padding-right:10px ;
+            }
+           
+            p{
+                font-size: 18px;
+                color: (var(--color-primary));
+                line-height: 25px;
+                padding: 10px;
+                // border: 2px solid red;
+
+                @include tablet {
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+            }
+            img{
+                width: 64px;
+                border-radius: 100%;
+
+                @include tablet {
+                    width: 32px;
+                }
+            }
+        }     
+        .rating{
+            display: flex;
+            justify-content: space-around;
+            // border: 2px solid red;
+
+            @include tablet {
+                width: 32%;
+                align-self: center;
+            }
+
+            span{
+                font-size: 18px;
+
+                @include tablet {
+                    font-size: 15px;
+                }
+            }
+            // border: 2px solid red;
+            .star {
+                fill: var(--color-quinquenary);
+                height: 1em;
+            }
+            .active{
+                fill: var(--color-primary);
+            }
+        }     
+    }
+}

@@ -1,24 +1,78 @@
-    .main-error{
-        width: 100%;
-        // width: 1214px;
-        height: 620px;
-        margin: auto;
+    .contener-error{       
         display: flex;
         flex-direction: column;
-        align-items: center;
-        border: 2px solid rgb(0, 255, 60);
-    
-            h2{
+        align-items: center;    
+        height: 600px;    
+        margin-bottom: 100px;
+        // border: 2px solid rgb(5, 168, 59);
+      
+            h2{               
+                width: 100%;
+                text-align: center;
                 font-size: 288px;
                 font-weight: 700;
-                color: (var(--color-primary));
+                margin-top: -1px; 
+                line-height: 410px;
+                color: (var(--color-primary));  
+                // border: 2px solid rgb(150, 7, 43);
+
+                @include tablet {
+                    font-size: 96px;            
+                }
             }
+
             h3{
                 font-size: 36px;
-                margin-top: 50px;
+                margin-top: -160px;                
                 margin-bottom: 70px;
+                // border: 2px solid rgb(0, 255, 60);
+
+                @include tablet {
+                    width: 260px;
+                    text-align: center; 
+                    font-size: 18px;                              
+                }
             }
+
             a{
-                color: (var(--color-primary));                
+                color: (var(--color-primary));
+                text-decoration: underline;
+
+                @include tablet {
+                    width: 221px;
+                    text-align: center;
+                    font-size: 14px;                              
+                }                
             }
+    }
+    .footer-error{
+        width: 167%;
+        margin-left: -290px;
+
+        @include tablet {
+            width: 139%; 
+            margin-left: -98px;
+            // border: 2px solid rgb(0, 255, 60);
+
+            .footer-logo{
+                margin-left: 45px;
+            }
+
+            p{
+                margin-left: 45px;
+            }
+        }
+    }  
+        
+    
+    .header-error{
+        width: 143%;
+        margin-left: -190px;
+
+        @include tablet {
+            width: 108%;
+            margin-left: -13px;
+            // border: 2px solid rgb(0, 255, 60);
+        }
+
     }

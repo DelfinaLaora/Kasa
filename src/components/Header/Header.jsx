@@ -3,11 +3,11 @@ import Logo from '../../assets/images/logo-couleur.png'
 
 function Header(){
     return(    
-        <header className='header-container'>
+        <header className='header-contener'>
             <img className="header-logo" src={Logo} alt="Logo de kasa"/>
             <div>
                 <Link to="/">Accueil</Link>
-                <Link to="/Apropos">A propos</Link>
+                <Link to="/About">A propos</Link>
             </div>
         </header>
     )

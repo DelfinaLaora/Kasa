@@ -1,18 +1,38 @@
 
-.header-container{
-    width: 80%;
-    height: 68px;
+.header-contener{    
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 80%;
+    height: 68px;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 35px;
+    // border: 2px solid red;
+
+    @include tablet {
+        width: 90%;
+        margin-bottom: 0;
+
+        .header-logo{
+            height: 36px;
+        }
+    }
+
     a{
         font-family: Montserrat, sans-serif;
         margin-left: 40px;    
         color: (var(--color-primary));  
-        text-decoration: none;      
+        text-decoration: none;   
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include tablet {
+            font-size: 17px;
+        }   
     }
 }
+
 

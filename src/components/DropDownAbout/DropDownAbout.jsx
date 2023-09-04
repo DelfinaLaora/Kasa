@@ -1,5 +1,5 @@
 import React from "react";
-import PropsDropDownApropos from "./PropsDropDownAPropos";
+import PropsDropDownAbout from "./PropsDropDownAbout";
 
 const description = [
     {        
@@ -12,7 +12,7 @@ const description = [
     },
     {        
         "title": "Service",
-        "text": "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
+        "text": `La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme`
     },
     {        
         "title": "Sécurité",
@@ -20,15 +20,15 @@ const description = [
     },
 ]
 
-function DropDownApropos() {
+function DropDownAbout() {
    
     return(
-        <div className="contener-dropdown-a-propos">
+        <div className="contener-dropdown-about">
            
             <article className="dropdown"> 
                 
                 {description.map((data, index) =>(
-                    <PropsDropDownApropos
+                    <PropsDropDownAbout
                     key={`${data}.title}-${index}`}
                     title={data.title}
                     text={data.text}
@@ -39,4 +39,4 @@ function DropDownApropos() {
     )
 }
 
-export default DropDownApropos
+export default DropDownAbout

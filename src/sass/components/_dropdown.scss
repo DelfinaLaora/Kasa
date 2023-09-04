@@ -1,4 +1,4 @@
-.contener-dropdown-logement, .contener-dropdown-a-propos {
+.contener-dropdown-logement, .contener-dropdown-about {
     margin: auto;   
     // border: 2px solid rgb(166, 224, 143);
 
@@ -18,28 +18,38 @@
             
             span{
                 margin-top: 0px;
-                }
+
+                @include tablet {
+                   font-size: 13px;
+                } 
+            }
   
             img{
                 width: 30px;
                 height: 20px;
+
+                @include tablet {
+                    width: 15px;
+                    height: 10px;
+                 } 
             }
             
         }
   
         .collapse {
-            line-height: 25.67px;
-            padding-left: 20px;
-            margin: auto;
-            margin-top: -5px;
-            background: (var(--color-tertiary));
             //auto en CSS supprimerait l'animation
             height: 0px;
+            line-height: 25.67px;            
+            margin: auto;
+            margin-top: -5px;
+            padding-left: 20px;
+            background: (var(--color-tertiary));                        
             border-radius: 0px 0px 10px 10px;
             overflow: hidden;
-            transition: height ease 0.9s;   
-            // border: 2px solid rgb(243, 14, 239);
+            transition: height ease 0.9s;             
             z-index: 1;
+            // border: 2px solid rgb(243, 14, 239);
+
             p{
                 font-size: 18px;
                 font-weight: 400;
@@ -53,7 +63,8 @@
     transform: rotate(180deg);
 }
   
-.contener-dropdown-a-propos {
+.contener-dropdown-about {
+    
     width: 90%;
     // la hauteur bloc de déplacement des autres section lors de l'ouverture
     // height: 450px;
@@ -62,26 +73,37 @@
     // border: 2px solid red;
 
     .dropdown {
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
         margin: auto;  
         margin-top: 50px;
         margin-bottom: 80px;  
         // border: 2px solid rgb(0, 17, 255);
 
+        @include tablet {            
+            width: 100%;
+            margin-top: 10px;
+         } 
+
         .onglet {
-            width:80%;
-            margin: auto;
+            width: 100%;
             margin-top: 45px;   
             z-index: 1; 
             // border: 2px solid rgb(7, 163, 33);
+
+            @include tablet {
+                width: 95%;
+             } 
         }
 
         .collapse {
-            width:79%;        
-            margin-top: -1px;      
-            // margin-bottom: 20px;            
-            // margin-left: 10%;
-            // border: 2px solid rgb(17, 255, 0);           
+            width: 99%;        
+            margin-top: -1px;             
+            margin-left: -6px;
+            // border: 2px solid rgb(17, 255, 0);   
+
             p{
                 font-size: 18px;
                 font-weight: 400;
@@ -96,29 +118,43 @@
     justify-content: space-between;  
     width: 90%;
     // border: 2px solid rgb(81, 205, 93);
+
     @include tablet {
         flex-direction: column;
+        width: 90%;
     }
 
     .dropdown {
-        width: 48%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 48%;
         margin-bottom: 30px;
         // border: 2px solid rgb(205, 81, 95);
+
+        @include tablet {
+            width: 97%;
+            margin-bottom: 40px;
+        }
+    
        
         .onglet {
             width: 97%;
-            // width: 582px;
-            // border: 2px solid rgb(17, 14, 15);              
+            // border: 2px solid rgb(17, 14, 15); 
+
+            @include tablet {
+                height: 40px;
+            }          
         }
         
         .collapse {    
-            width: 93%;  
-            // margin-top: -5px;                     
+            width: 93%;                   
             padding-right: 20px;      
             // border: 2px solid rgb(17, 14, 15);
+            
+            @include tablet {
+                width: 88%;
+            } 
         }
     }
 }

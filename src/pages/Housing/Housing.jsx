@@ -1,0 +1,97 @@
+import { useNavigate, useParams } from 'react-router-dom'
+import { useEffect, useState } from "react"
+import Carousel from '../../components/Carousel/Carousel'
+import Loader from '../../utils/Style/Loader'
+import Rating from '../../components/Rating/Rating'
+import DropDownHousing from '../../components/DropDownHousing/DropDownHousing'
+import Error from '../Error/ErrorBis'
+
+function Housing() {
+
+    const params = useParams()   
+    const [housingData, setHousingData] = useState({})
+    const [isDataLoading, setDataLoading] = useState(true)
+    const navigate = useNavigate()
+  
+    useEffect(() => {
+      async function fetchData() {
+        setDataLoading(true)
+        try {
+          // const response = await fetch(`http://localhost:3000/annoncesLogements.json`)
+          const response = await fetch('/housingListings.json')
+          const json = await response.json()
+          const currentObject = json.find((item) => item.id === params.id)
+          if (!currentObject) {
+            navigate('/error')
+            // navigate('/NotFound')
+          } else {
+            setHousingData(currentObject)
+          }
+          console.log(currentObject)
+        } catch (error) {
+          console.log(error)
+        } finally{
+          setDataLoading(false)
+        }
+      }
+     
+    fetchData()
+    }, [params.id, navigate])
+
+    console.log(housingData)
+    const hosts = housingData.host
+    // console.log(hosts)
+    const tags= housingData.tags
+    // console.log(tags)
+    
+    return(    
+      <>
+        {isDataLoading ? (
+          <Loader />
+          ) : (   
+            <>  
+                <div className="contener-logement">
+
+                    <div className="caroussel"> 
+                      <Carousel pictures={housingData.pictures}/>            
+                    </div>
+
+                    <div className="card-contener-logement" >
+                        <div> 
+                            <h2>{housingData.title}</h2>
+                            <h3>{housingData.location}</h3>
+                            <div className='tags'>
+                              {tags.map((tag, index)=>
+                              <div key={`${tag}-${index}`}><p>{tag}</p></div>)}
+                            </div>                   
+                        </div>      
+                        <div className="lessor">                       
+                            <div className="host">
+                                <p>{hosts.name}</p>
+                                <img src={hosts.picture} alt="profil"/>
+                            </div>
+                          
+                            <div className="rating">                       
+                              <Rating rating={housingData.rating}/>                        
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <DropDownHousing 
+                  equipments={housingData.equipments}
+                  description={housingData.description}
+                />
+
+            </>
+          )
+        }
+      </>           
+    )    
+}
+
+export default Housing
+  
+
+          

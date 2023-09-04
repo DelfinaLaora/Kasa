@@ -5,13 +5,14 @@ import { Outlet } from "react-router-dom";
 
 function Root(){
     return(
-        <div className="general">  
+        // <div className="general">  
+        <>  
            <Header />
                 <main>
                     <Outlet />
                 </main>
             <Footer />           
-        </div>
+        </>
     )
 }
 

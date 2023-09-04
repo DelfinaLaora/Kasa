@@ -1,39 +1,9 @@
-// import PropTypes from "prop-types"
 import arrowDropDown from "../../assets/images/arrow.png"
 import { useRef } from "react";
-import { useNavigate, useParams } from 'react-router-dom'
-import { useEffect, useState } from "react"
-// import DropDownHousingProps from '../../components/DropDownLogement/DropDownLogement'
+import { useState } from "react"
+import PropTypes from "prop-types"
 
-function DropDownHousingProps() {
-
-    const params = useParams()   
-    const [housingData, setHousingData] = useState({})
-    const navigate = useNavigate()
-  
-    useEffect(() => {
-      async function fetchData() {
-        try {
-          // const response = await fetch(`http://localhost:3000/annoncesLogements.json`)
-          const response = await fetch('/annoncesLogements.json')
-          const json = await response.json()
-          const currentObject = json.find((item) => item.id === params.id)
-          if (!currentObject) {
-            navigate('/NotFound')
-          } else {
-            setHousingData(currentObject)
-          }
-          console.log(currentObject)
-        } catch (error) {
-          console.log(error)
-        }
-      }
-     
-    fetchData()
-    }, [params.id, navigate])
-    
-    const listEquipements = housingData.equipments
-    const description = housingData.description
+function DropDownHousing({description, equipments}) {
 
     const [openEquipement, setOpenEquipemet] = useState(false)
     const [openDescription, setOpenDescription] = useState(false)
@@ -85,7 +55,7 @@ function DropDownHousingProps() {
 
                     <div className="collapse" ref={contentRefE} style={openEquipement ? {height: contentRefE.current.scrollHeight + "px"} : {height: "0px"}}>        
                         <ul>
-                            {listEquipements?.map((equipement, index) =>(
+                            {equipments?.map((equipement, index) =>(
                                 <li key={`${equipement}-${index}`}>{equipement}</li>
                             ))}                       
                         </ul> 
@@ -96,9 +66,9 @@ function DropDownHousingProps() {
     )
 }
 
-// DropDownHousingProps.propTypes = { 
-//     description: PropTypes.string.isRequired,
-//     equipments: PropTypes.array.isRequired,    
-// }
+DropDownHousing.propTypes = { 
+    description: PropTypes.string.isRequired,
+    equipments: PropTypes.array.isRequired,    
+}
 
-export default DropDownHousingProps
+export default DropDownHousing
