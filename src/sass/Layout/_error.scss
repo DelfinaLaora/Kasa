@@ -1,78 +1,44 @@
-    .contener-error{       
-        display: flex;
-        flex-direction: column;
-        align-items: center;    
-        height: 600px;    
-        margin-bottom: 100px;
-        // border: 2px solid rgb(5, 168, 59);
-      
-            h2{               
-                width: 100%;
-                text-align: center;
-                font-size: 288px;
-                font-weight: 700;
-                margin-top: -1px; 
-                line-height: 410px;
-                color: (var(--color-primary));  
-                // border: 2px solid rgb(150, 7, 43);
-
-                @include tablet {
-                    font-size: 96px;            
-                }
-            }
-
-            h3{
-                font-size: 36px;
-                margin-top: -160px;                
-                margin-bottom: 70px;
-                // border: 2px solid rgb(0, 255, 60);
-
-                @include tablet {
-                    width: 260px;
-                    text-align: center; 
-                    font-size: 18px;                              
-                }
-            }
-
-            a{
-                color: (var(--color-primary));
-                text-decoration: underline;
-
-                @include tablet {
-                    width: 221px;
-                    text-align: center;
-                    font-size: 14px;                              
-                }                
-            }
-    }
-    .footer-error{
-        width: 167%;
-        margin-left: -290px;
-
-        @include tablet {
-            width: 139%; 
-            margin-left: -98px;
-            // border: 2px solid rgb(0, 255, 60);
-
-            .footer-logo{
-                margin-left: 45px;
-            }
-
-            p{
-                margin-left: 45px;
-            }
-        }
-    }  
-        
+.contener-error{       
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    height: 600px;    
+    margin-bottom: 100px;
     
-    .header-error{
-        width: 143%;
-        margin-left: -190px;
+    h2{               
+        width: 100%;
+        text-align: center;
+        font-size: 288px;
+        font-weight: 700;
+        margin-top: -1px; 
+        line-height: 410px;
+        color: (var(--color-primary));  
 
-        @include tablet {
-            width: 108%;
-            margin-left: -13px;
-            // border: 2px solid rgb(0, 255, 60);
+        @include mobil {
+            font-size: 96px;            
         }
-
     }
+
+    h3{
+        font-size: 36px;
+        margin-top: -160px;                
+        margin-bottom: 70px;
+
+        @include mobil {
+            width: 260px;
+            text-align: center; 
+            font-size: 18px;                              
+        }
+    }
+
+    a{
+        color: (var(--color-primary));
+        text-decoration: underline;
+
+        @include mobil {
+            width: 221px;
+            text-align: center;
+            font-size: 14px;                              
+        }                
+    }
+}

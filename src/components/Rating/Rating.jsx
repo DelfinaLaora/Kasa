@@ -11,13 +11,7 @@ function Rating({rating}){
             {stars.map((elem)=>
                 rating >= elem ?  (
                     <span key={elem}>{starActive}</span>
-                ) : null
-            )}
-
-            {stars.map((elem)=> 
-                rating <= elem -1 ? (                       
-                    <span key={elem}>{star}</span>
-                ) : null
+                ) : <span key={elem}>{star}</span>
             )}
         </>       
     )

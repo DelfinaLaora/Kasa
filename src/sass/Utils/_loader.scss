@@ -1,11 +1,14 @@
 .loader {
   padding: 10px;
-  border: 6px solid (var(--color-primary));
+  border: 3px solid (var(--color-primary));
   border-bottom-color: transparent;
   border-radius: 22px;
   animation: loader 1s infinite linear;
   height: 0;
   width: 0;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 @keyframes loader {

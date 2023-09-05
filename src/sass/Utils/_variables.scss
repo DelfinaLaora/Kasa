@@ -8,10 +8,10 @@
 }
 
 $breakpoints: (desktop: 1024px,
-               tablet: 376px);
+               mobil: 376px);
 
-@mixin tablet {
-    @media screen and (max-width: map-get($breakpoints, tablet)) {
+@mixin mobil {
+    @media screen and (max-width: map-get($breakpoints, mobil)) {
         @content;
     }
 }

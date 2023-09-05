@@ -8,6 +8,27 @@
   --color-quinquenary: #E3E3E3;
 }
 
+.loader {
+  padding: 10px;
+  border: 3px solid var(--color-primary);
+  border-bottom-color: transparent;
+  border-radius: 22px;
+  animation: loader 1s infinite linear;
+  height: 0;
+  width: 0;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /*reset CSS afin de réinitialiser les données dans les différents navigateurs*/
 @import-normalize;
 body {
@@ -70,6 +91,12 @@ body {
 
 .contener-dropdown-logement, .contener-dropdown-about {
   margin: auto;
+  width: 90%;
+}
+.contener-dropdown-logement .dropdown, .contener-dropdown-about .dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contener-dropdown-logement .dropdown .onglet, .contener-dropdown-about .dropdown .onglet {
   display: flex;
@@ -81,10 +108,16 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 1;
+}
+@media screen and (max-width: 376px) {
+  .contener-dropdown-logement .dropdown .onglet, .contener-dropdown-about .dropdown .onglet {
+    height: 30px;
+  }
 }
 .contener-dropdown-logement .dropdown .onglet span, .contener-dropdown-about .dropdown .onglet span {
   margin-top: 0px;
+  text-transform: capitalize;
 }
 @media screen and (max-width: 376px) {
   .contener-dropdown-logement .dropdown .onglet span, .contener-dropdown-about .dropdown .onglet span {
@@ -111,12 +144,17 @@ body {
   border-radius: 0px 0px 10px 10px;
   overflow: hidden;
   transition: height ease 0.9s;
-  z-index: 1;
+  z-index: 0;
 }
-.contener-dropdown-logement .dropdown .collapse p, .contener-dropdown-about .dropdown .collapse p {
+.contener-dropdown-logement .dropdown .collapse p, .contener-dropdown-logement .dropdown .collapse li, .contener-dropdown-about .dropdown .collapse p, .contener-dropdown-about .dropdown .collapse li {
   font-size: 18px;
   font-weight: 400;
   color: var(--color-primary);
+}
+@media screen and (max-width: 376px) {
+  .contener-dropdown-logement .dropdown .collapse p, .contener-dropdown-logement .dropdown .collapse li, .contener-dropdown-about .dropdown .collapse p, .contener-dropdown-about .dropdown .collapse li {
+    font-size: 12px;
+  }
 }
 
 .rotate {
@@ -124,14 +162,9 @@ body {
 }
 
 .contener-dropdown-about {
-  width: 90%;
-  margin: auto;
   padding-top: 10px;
 }
 .contener-dropdown-about .dropdown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 90%;
   margin: auto;
   margin-top: 50px;
@@ -146,7 +179,6 @@ body {
 .contener-dropdown-about .dropdown .onglet {
   width: 100%;
   margin-top: 45px;
-  z-index: 1;
 }
 @media screen and (max-width: 376px) {
   .contener-dropdown-about .dropdown .onglet {
@@ -155,19 +187,18 @@ body {
 }
 .contener-dropdown-about .dropdown .collapse {
   width: 99%;
-  margin-top: -1px;
   margin-left: -6px;
 }
-.contener-dropdown-about .dropdown .collapse p {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--color-primary);
+@media screen and (max-width: 376px) {
+  .contener-dropdown-about .dropdown .collapse {
+    width: 93%;
+    margin-left: 0;
+  }
 }
 
 .contener-dropdown-logement {
   display: flex;
   justify-content: space-between;
-  width: 90%;
 }
 @media screen and (max-width: 376px) {
   .contener-dropdown-logement {
@@ -176,9 +207,6 @@ body {
   }
 }
 .contener-dropdown-logement .dropdown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 48%;
   margin-bottom: 30px;
 }
@@ -191,11 +219,6 @@ body {
 .contener-dropdown-logement .dropdown .onglet {
   width: 97%;
 }
-@media screen and (max-width: 376px) {
-  .contener-dropdown-logement .dropdown .onglet {
-    height: 40px;
-  }
-}
 .contener-dropdown-logement .dropdown .collapse {
   width: 93%;
   padding-right: 20px;
@@ -206,9 +229,13 @@ body {
   }
 }
 
-body {
+:root {
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+
+body {
   width: 100%;
   margin: auto;
   background-color: var(--color-quaternary);
@@ -620,33 +647,5 @@ footer p {
     width: 221px;
     text-align: center;
     font-size: 14px;
-  }
-}
-
-.footer-error {
-  width: 167%;
-  margin-left: -290px;
-}
-@media screen and (max-width: 376px) {
-  .footer-error {
-    width: 139%;
-    margin-left: -98px;
-  }
-  .footer-error .footer-logo {
-    margin-left: 45px;
-  }
-  .footer-error p {
-    margin-left: 45px;
-  }
-}
-
-.header-error {
-  width: 143%;
-  margin-left: -190px;
-}
-@media screen and (max-width: 376px) {
-  .header-error {
-    width: 108%;
-    margin-left: -13px;
   }
 }/*# sourceMappingURL=style.css.map */

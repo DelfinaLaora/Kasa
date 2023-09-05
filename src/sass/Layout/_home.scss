@@ -9,9 +9,8 @@
     padding: 15px;
     background-color: (var(--color-tertiary));
     border-radius: 10px;
-    // border: 2px solid red;
 
-    @include tablet {
+    @include mobil {
         width: 90%;        
         flex-direction: column;
         padding: 0px;
@@ -26,9 +25,8 @@
         margin-bottom: 30px;
         position: relative;
         border-radius: 10px;
-        // border: 2px solid red;
         
-        @include tablet {
+        @include mobil {
             width: 100%;
             margin: 0;
             margin-bottom: 30px;

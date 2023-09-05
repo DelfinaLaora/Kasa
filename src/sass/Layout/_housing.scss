@@ -1,13 +1,13 @@
 .contener-logement{
     width: 100%;
-    // border: 2px solid red;
+
     .caroussel {
         width: 90%;
         height: 415px;
         margin: auto;
         position: relative;
-        // border: 2px solid red;
-        @include tablet {
+
+        @include mobil {
             width: 90%;
             height: 255px;   
             margin-top: 15px;         
@@ -17,25 +17,29 @@
             width: 100%;
             height: 415px;
             object-fit: cover;
-            border-radius: 10px;
-            // border: 2px solid rgb(0, 255, 42);
-            @include tablet {
-                height: 255px;
-                
+            border-radius: 10px;  
+           
+            @include mobil {
+                height: 255px;                
             }
         }
+            
         .arrow {
             display: flex;
             justify-content: space-between;
             width: 100%; 
             position: absolute;
-            top:150px;
-            // border: 2px solid rgb(0, 30, 255);
-            @include tablet {
-                top:100px;
+            top: 150px;            
+           
+            @include mobil {
+                top: 100px;
                 height: 30px;
-            }
-        }
+            }           
+        }        
+        
+
+        
+        
         .dots{
             width: 100%;
             position: absolute;
@@ -43,9 +47,8 @@
             margin: auto;
             top: 360px;            
             color: (var(--color-quaternary));
-            // border: 2px solid rgb(251, 0, 255);
 
-            @include tablet {
+            @include mobil {
                 top: 200px;
             }
         }
@@ -54,14 +57,12 @@
     .card-contener-logement {
         display: flex;
         justify-content: space-between;
-        // flex-wrap: wrap;
         width: 90%;
         margin: auto;
         margin-top: 20px;
         margin-bottom: 20px;
-        // border: 2px solid rgb(4, 165, 143);
 
-        @include tablet {
+        @include mobil {
             flex-direction: column;
             width: 90%;
             margin-bottom: 10px;
@@ -71,17 +72,15 @@
             font-size: 36px;
             font-weight: 500;            
             color: (var(--color-primary));
-            // border: 2px solid red;
 
-            @include tablet {
+            @include mobil {
                 font-size: 18px;
                 margin: 0;
             }
         }
         h3{
-            @include tablet {
+            @include mobil {
                 font-size: 14px;
-                // border: 2px solid red;
             }
         }
         
@@ -97,42 +96,41 @@
                 margin-right: 10px;
                 padding-left: 15px;
                 padding-right: 15px;
-                // border: 2px solid rgb(13, 0, 255);
                 
-                @include tablet {
+                @include mobil {
                     height: 18px; 
                     font-size: 10px;                                       
                 }
             }
+
             p{
                 white-space: nowrap;
                 color: (var(--color-quaternary));
                 border-radius: 10px;
-                // border: 2px solid rgb(13, 0, 255);
 
-                @include tablet {
+                @include mobil {
                     font-size: 10px;
                 }
             }
         } 
+
         .lessor{
-            @include tablet {
+            @include mobil {
                 display: flex;
                 flex-direction:row-reverse;
                 justify-content: space-between;
-                margin-top: 10px;;
-                // border: 2px solid red;
+                margin-top: 10px;
             }
 
         }
+
         .host {
             display: flex;
             align-items: center;
             width: 150px;
             text-align: right;                        
-            // border: 2px solid rgb(242, 0, 255);
             
-            @include tablet {
+            @include mobil {
                 width: 100px;
                 height: 50px;
                 padding-right:10px ;
@@ -143,28 +141,28 @@
                 color: (var(--color-primary));
                 line-height: 25px;
                 padding: 10px;
-                // border: 2px solid red;
 
-                @include tablet {
+                @include mobil {
                     font-size: 12px;
                     line-height: 17px;
                 }
             }
+
             img{
                 width: 64px;
                 border-radius: 100%;
 
-                @include tablet {
+                @include mobil {
                     width: 32px;
                 }
             }
         }     
+
         .rating{
             display: flex;
             justify-content: space-around;
-            // border: 2px solid red;
 
-            @include tablet {
+            @include mobil {
                 width: 32%;
                 align-self: center;
             }
@@ -172,15 +170,16 @@
             span{
                 font-size: 18px;
 
-                @include tablet {
+                @include mobil {
                     font-size: 15px;
                 }
             }
-            // border: 2px solid red;
+
             .star {
                 fill: var(--color-quinquenary);
                 height: 1em;
             }
+            
             .active{
                 fill: var(--color-primary);
             }

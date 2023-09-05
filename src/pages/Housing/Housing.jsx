@@ -3,8 +3,10 @@ import { useEffect, useState } from "react"
 import Carousel from '../../components/Carousel/Carousel'
 import Loader from '../../utils/Style/Loader'
 import Rating from '../../components/Rating/Rating'
-import DropDownHousing from '../../components/DropDownHousing/DropDownHousing'
-import Error from '../Error/ErrorBis'
+// import DropDownHousing from '../../components/DropDownHousing/DropDownHousing'
+// import Error from '../Error/ErrorBis'
+import DropDown from '../../components/DropDownAbout/DropDown'
+
 
 function Housing() {
 
@@ -39,11 +41,13 @@ function Housing() {
     }, [params.id, navigate])
 
     console.log(housingData)
-    const hosts = housingData.host
+   console.log( housingData.description)
+    // const hosts = housingData.host
     // console.log(hosts)
     const tags= housingData.tags
     // console.log(tags)
-    
+    const titre = Object.keys(housingData)
+    // console.log(titre)
     return(    
       <>
         {isDataLoading ? (
@@ -67,8 +71,8 @@ function Housing() {
                         </div>      
                         <div className="lessor">                       
                             <div className="host">
-                                <p>{hosts.name}</p>
-                                <img src={hosts.picture} alt="profil"/>
+                                <p>{housingData.host.name}</p>
+                                <img src={housingData.host.picture} alt="profil"/>
                             </div>
                           
                             <div className="rating">                       
@@ -78,11 +82,21 @@ function Housing() {
                     </div>
 
                 </div>
-                
-                <DropDownHousing 
-                  equipments={housingData.equipments}
-                  description={housingData.description}
+                <div className="contener-dropdown-logement">
+
+                <article className="dropdown">
+                <DropDown
+                  titre = {titre[4]}             
+                  description = {housingData.description}
                 />
+                </article>
+                <article className="dropdown">
+                <DropDown 
+                  titre = {titre[8]}
+                  equipments = {housingData.equipments}                 
+                />
+                </article>
+                </div>
 
             </>
           )

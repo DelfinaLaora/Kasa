@@ -26,16 +26,17 @@ function Carousel({pictures}){
 
         return(
             <>               
-                <>        
-                    <img className="caroussel-img" src={pictures[currentIndex]} alt="logement" />   
-                            
+                <>      
                     <div className="arrow">
                         <img src={arrowBack} className="arrow_left" onClick={Previous} alt="flèche de gauche"/>
-                        <img src={arrowForward}className="arrow_right" onClick={Next}  alt="flèche de droite"/>
+                        <img src={arrowForward} className="arrow_right" onClick={Next}  alt="flèche de droite"/>
                     </div>
+
+                    <img className="caroussel-img" src={pictures[currentIndex]} alt="logement" />   
+                                        
                     <div className="dots">
                         <p>{index + `/` + pictures.length}</p>
-                    </div> 
+                    </div>  
                 </>               
             </>
         )

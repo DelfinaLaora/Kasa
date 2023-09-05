@@ -1,4 +1,3 @@
-
 .header-contener{    
     display: flex;
     justify-content: space-between;
@@ -8,9 +7,8 @@
     margin: auto;
     margin-top: 10px;
     margin-bottom: 35px;
-    // border: 2px solid red;
 
-    @include tablet {
+    @include mobil {
         width: 90%;
         margin-bottom: 0;
 
@@ -29,7 +27,7 @@
             text-decoration: underline;
         }
 
-        @include tablet {
+        @include mobil {
             font-size: 17px;
         }   
     }
