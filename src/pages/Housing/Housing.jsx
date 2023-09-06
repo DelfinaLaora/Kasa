@@ -3,10 +3,7 @@ import { useEffect, useState } from "react"
 import Carousel from '../../components/Carousel/Carousel'
 import Loader from '../../utils/Style/Loader'
 import Rating from '../../components/Rating/Rating'
-// import DropDownHousing from '../../components/DropDownHousing/DropDownHousing'
-// import Error from '../Error/ErrorBis'
-import DropDown from '../../components/DropDownAbout/DropDown'
-
+import DropDown from '../../components/DropDown/DropDown'
 
 function Housing() {
 
@@ -16,38 +13,40 @@ function Housing() {
     const navigate = useNavigate()
   
     useEffect(() => {
-      async function fetchData() {
-        setDataLoading(true)
-        try {
-          // const response = await fetch(`http://localhost:3000/annoncesLogements.json`)
-          const response = await fetch('/housingListings.json')
-          const json = await response.json()
-          const currentObject = json.find((item) => item.id === params.id)
-          if (!currentObject) {
-            navigate('/error')
-            // navigate('/NotFound')
-          } else {
-            setHousingData(currentObject)
-          }
-          console.log(currentObject)
-        } catch (error) {
-          console.log(error)
-        } finally{
-          setDataLoading(false)
+        async function fetchData() {
+
+            setDataLoading(true)
+
+            try {
+                const response = await fetch('/housingListings.json')
+                const json = await response.json()
+                const currentObject = json.find((item) => item.id === params.id)
+
+                if (!currentObject) {
+                  navigate('/error')
+
+                } else {
+                  setHousingData(currentObject)
+                }
+
+                // console.log(currentObject)
+            } catch (error) {
+              console.log(error)
+
+            } finally{
+              setDataLoading(false)
+            }
         }
-      }
      
     fetchData()
     }, [params.id, navigate])
 
-    console.log(housingData)
-   console.log( housingData.description)
-    // const hosts = housingData.host
-    // console.log(hosts)
-    const tags= housingData.tags
+    // console.log(housingData)
+    const tags = housingData.tags
     // console.log(tags)
     const titre = Object.keys(housingData)
     // console.log(titre)
+
     return(    
       <>
         {isDataLoading ? (
@@ -65,8 +64,8 @@ function Housing() {
                             <h2>{housingData.title}</h2>
                             <h3>{housingData.location}</h3>
                             <div className='tags'>
-                              {tags.map((tag, index)=>
-                              <div key={`${tag}-${index}`}><p>{tag}</p></div>)}
+                                {tags.map((tag, index)=>
+                                <div key={`${tag}-${index}`}><p>{tag}</p></div>)}
                             </div>                   
                         </div>      
                         <div className="lessor">                       
@@ -76,7 +75,7 @@ function Housing() {
                             </div>
                           
                             <div className="rating">                       
-                              <Rating rating={housingData.rating}/>                        
+                                <Rating rating={housingData.rating}/>                        
                             </div>
                         </div>
                     </div>
@@ -84,20 +83,20 @@ function Housing() {
                 </div>
                 <div className="contener-dropdown-logement">
 
-                <article className="dropdown">
-                <DropDown
-                  titre = {titre[4]}             
-                  description = {housingData.description}
-                />
-                </article>
-                <article className="dropdown">
-                <DropDown 
-                  titre = {titre[8]}
-                  equipments = {housingData.equipments}                 
-                />
-                </article>
-                </div>
+                    <article className="dropdown">
+                        <DropDown
+                            titre = {titre[4]}             
+                            description = {housingData.description}
+                        />
+                    </article>
 
+                    <article className="dropdown">
+                        <DropDown 
+                            titre = {titre[8]}
+                            equipments = {housingData.equipments}                 
+                        />
+                    </article>
+                </div>
             </>
           )
         }

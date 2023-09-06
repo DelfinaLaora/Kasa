@@ -9,8 +9,8 @@ function Carousel({pictures}){
     if(pictures.length > 1){
         
         let index = currentIndex + 1    
-        console.log(index)
-        console.log(currentIndex)
+        // console.log(index)
+        // console.log(currentIndex)
 
         function Previous(){    
             setCurrentIndex((currentIndex) =>
@@ -49,7 +49,7 @@ function Carousel({pictures}){
     }
 }
 
-Carousel.propTypes = {  
+Carousel.propType = {  
   pictures: PropTypes.array.isRequired,
 }
 

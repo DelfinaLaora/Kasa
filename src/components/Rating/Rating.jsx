@@ -9,14 +9,12 @@ function Rating({rating}){
     return(       
         <>
             {stars.map((elem)=>
-                rating >= elem ?  (
-                    <span key={elem}>{starActive}</span>
-                ) : <span key={elem}>{star}</span>
+                rating >= elem ? <span key={elem}>{starActive}</span> : <span key={elem}>{star}</span>
             )}
         </>       
     )
 }
-Rating.propTypes = {
+Rating.propType = {
     rating: PropTypes.string.isRequired,
 }
 export default Rating

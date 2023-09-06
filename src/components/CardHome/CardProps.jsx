@@ -1,5 +1,4 @@
 import PropTypes from "prop-types"
-
 function CardProps({cover, title}) {
     return (        
         <>            
@@ -9,7 +8,7 @@ function CardProps({cover, title}) {
     )
 }
 
-CardProps.propTypes = {  
+CardProps.propType = {  
     title: PropTypes.string.isRequired,
     cover: PropTypes.string.isRequired,
 }
