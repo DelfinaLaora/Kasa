@@ -162,23 +162,21 @@ body {
 }
 
 .contener-dropdown-about {
-  padding-top: 10px;
+  margin-bottom: 50px;
 }
 .contener-dropdown-about .dropdown {
   width: 90%;
   margin: auto;
-  margin-top: 50px;
-  margin-bottom: 80px;
+  margin-top: 45px;
 }
 @media screen and (max-width: 376px) {
   .contener-dropdown-about .dropdown {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 30px;
   }
 }
 .contener-dropdown-about .dropdown .onglet {
   width: 100%;
-  margin-top: 45px;
 }
 @media screen and (max-width: 376px) {
   .contener-dropdown-about .dropdown .onglet {

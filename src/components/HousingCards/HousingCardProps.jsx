@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-function CardProps({cover, title}) {
+function HousingCardProps({cover, title}) {
     return (        
         <>            
             <img src={cover} alt="logement"/>
@@ -8,10 +8,10 @@ function CardProps({cover, title}) {
     )
 }
 
-CardProps.propType = {  
+HousingCardProps.propType = {  
     title: PropTypes.string.isRequired,
     cover: PropTypes.string.isRequired,
 }
 
-export default CardProps
+export default HousingCardProps
 

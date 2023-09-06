@@ -1,5 +1,5 @@
 import React from "react";
-import DropDown from "./DropDown";
+import Collapse from "./DropDown";
 
 const description = [
     {        
@@ -23,18 +23,15 @@ const description = [
 function DropDownAbout() {
    
     return(
-        <div className="contener-dropdown-about">
-           
-            <article className="dropdown"> 
-                
+        <div className="contener-dropdown-about">           
+                          
                 {description.map((data, index) =>(
-                    <DropDown
+                    <Collapse
                     key={`${data}.title}-${index}`}
                     title={data.title}
-                    text={data.text}
+                    text= <p>{data.text}</p>
                     />
                 ))}
-            </article>            
         </div>
     )
 }

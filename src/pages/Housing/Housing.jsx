@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import Carousel from '../../components/Carousel/Carousel'
 import Loader from '../../utils/Style/Loader'
 import Rating from '../../components/Rating/Rating'
-import DropDown from '../../components/DropDown/DropDown'
+import Collapse from '../../components/DropDown/DropDown'
 
 function Housing() {
 
@@ -81,21 +81,21 @@ function Housing() {
                     </div>
 
                 </div>
-                <div className="contener-dropdown-logement">
-
-                    <article className="dropdown">
-                        <DropDown
-                            titre = {titre[4]}             
-                            description = {housingData.description}
+                <div className="contener-dropdown-logement">                    
+                        <Collapse 
+                            title = {titre[4]}             
+                            text = <p>{housingData.description}</p>
                         />
-                    </article>
-
-                    <article className="dropdown">
-                        <DropDown 
-                            titre = {titre[8]}
-                            equipments = {housingData.equipments}                 
+                   
+                        <Collapse 
+                            title = {titre[8]}
+                            text =  <ul>
+                                        {housingData.equipments.map((equipement, index) =>(
+                                            <li key={`${equipement}-${index}`}>{equipement}</li>
+                                        ))}                       
+                                    </ul>                                          
                         />
-                    </article>
+                   
                 </div>
             </>
           )

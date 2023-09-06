@@ -1,14 +1,21 @@
 import React from "react"
-import Card from "../../components/CardHome/Card"
-import BannierHome from "../../components/BannierHome/BannierHome"
+import HousingCard from "../../components/HousingCards/HousingCard"
+import Bannier from "../../components/Bannier/Bannier"
+import bannierHome from '../../assets/images/Image-1.png'
 
 function Home(){
     return(
         <>
-            <BannierHome />               
-            <Card />
+            <Bannier
+                title = {"Chez vous, partout et ailleurs"}
+                picture =  {bannierHome}
+            />               
+            <HousingCard />
         </>
     )
 }
 
 export default Home
+
+
+

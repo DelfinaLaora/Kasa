@@ -1,11 +1,13 @@
 import React from "react"
-import BannierAbout from "../../components/BannierAbout/BannierAbout"
 import DropDownAbout from "../../components/DropDown/DropDownAbout"
-
+import Bannier from "../../components/Bannier/Bannier"
+import pictureAbout from '../../assets/images/Image-2.png'
 function About () {
     return(
         <div>
-            <BannierAbout />  
+            <Bannier
+                picture = {pictureAbout} 
+            />  
             <DropDownAbout />  
         </div>   
     )
@@ -13,3 +15,4 @@ function About () {
 
 export default About
 
+ 

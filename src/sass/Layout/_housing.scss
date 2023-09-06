@@ -18,7 +18,7 @@
             height: 415px;
             object-fit: cover;
             border-radius: 10px;  
-           
+
             @include mobil {
                 height: 255px;                
             }
@@ -36,9 +36,6 @@
                 height: 30px;
             }           
         }        
-        
-
-        
         
         .dots{
             width: 100%;
