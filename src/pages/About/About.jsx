@@ -1,14 +1,15 @@
 import React from "react"
-import DropDownAbout from "../../components/DropDown/DropDownAbout"
 import Bannier from "../../components/Bannier/Bannier"
 import pictureAbout from '../../assets/images/Image-2.png'
+import CollapseAbout from "../../components/Collapse/CollapseAbout"
+
 function About () {
     return(
         <div>
             <Bannier
                 picture = {pictureAbout} 
             />  
-            <DropDownAbout />  
+            <CollapseAbout />  
         </div>   
     )
 }

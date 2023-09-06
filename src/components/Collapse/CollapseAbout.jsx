@@ -1,5 +1,5 @@
 import React from "react";
-import Collapse from "./DropDown";
+import Collapse from "./Collapse";
 
 const description = [
     {        
@@ -20,7 +20,7 @@ const description = [
     },
 ]
 
-function DropDownAbout() {
+function CollapseAbout() {
    
     return(
         <div className="contener-dropdown-about">           
@@ -36,4 +36,4 @@ function DropDownAbout() {
     )
 }
 
-export default DropDownAbout
+export default CollapseAbout

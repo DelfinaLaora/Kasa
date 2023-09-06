@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import Carousel from '../../components/Carousel/Carousel'
 import Loader from '../../utils/Style/Loader'
 import Rating from '../../components/Rating/Rating'
-import Collapse from '../../components/DropDown/DropDown'
+import Collapse from '../../components/Collapse/Collapse'
 
 function Housing() {
 

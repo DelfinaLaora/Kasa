@@ -1,5 +1,5 @@
 import React from "react"
-import HousingCard from "../../components/HousingCards/HousingCard"
+import HousingCards from "../../components/HousingCards/HousingCards"
 import Bannier from "../../components/Bannier/Bannier"
 import bannierHome from '../../assets/images/Image-1.png'
 
@@ -10,7 +10,7 @@ function Home(){
                 title = {"Chez vous, partout et ailleurs"}
                 picture =  {bannierHome}
             />               
-            <HousingCard />
+            <HousingCards />
         </>
     )
 }

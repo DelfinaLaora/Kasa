@@ -1,8 +1,8 @@
-import HousingCardProps from "./HousingCardProps"
+import HousingCardsProps from "./HousingCardsProps"
 import { useFetch } from "../../utils/Hooks/Hooks"
 import { Link } from 'react-router-dom'
 
-function HousingCard() {
+function HousingCards() {
     const {data, error} = useFetch('/housingListings.json')
    
     const logementsList = data   
@@ -19,7 +19,7 @@ function HousingCard() {
                 // "annonce" donnera le lien vers l'annonce ayant l'ID ex <a href="/annonce/1">               
                <Link key={`logement-${logement.id}`} to ={`/annonce/${logement.id}`} className="card"> 
                     <div className="background-card"></div>
-                    <HousingCardProps                                    
+                    <HousingCardsProps                                    
                         title={logement.title}
                         cover={logement.cover}
                     /> 
@@ -29,4 +29,4 @@ function HousingCard() {
         </div>  
     )
 }
-export default HousingCard
+export default HousingCards
