@@ -1,11 +1,12 @@
 .contener-logement{
     width: 100%;
-
+    margin-bottom: 22px;
+    
     .caroussel {
+        position: relative;
         width: 90%;
         height: 415px;
-        margin: auto;
-        position: relative;
+        margin: auto;        
 
         @include mobil {
             width: 90%;
@@ -25,12 +26,12 @@
         }
             
         .arrow {
-            display: flex;
-            justify-content: space-between;
-            width: 100%; 
             position: absolute;
             top: 150px;            
-           
+            display: flex;
+            justify-content: space-between;                                     
+            width: 100%;
+            
             @include mobil {
                 top: 100px;
                 height: 30px;
@@ -38,11 +39,11 @@
         }        
         
         .dots{
-            width: 100%;
             position: absolute;
+            top: 360px;
+            width: 100%;
             text-align: center;
-            margin: auto;
-            top: 360px;            
+            margin: auto;                       
             color: (var(--color-quaternary));
 
             @include mobil {
@@ -87,12 +88,12 @@
             div{                
                 display: flex;
                 align-items: center;
-                height: 25px;                
-                background-color: (var(--color-primary));
-                border-radius: 7px;
+                height: 25px;         
                 margin-right: 10px;
                 padding-left: 15px;
-                padding-right: 15px;
+                padding-right: 15px;       
+                background-color: (var(--color-primary));
+                border-radius: 7px;
                 
                 @include mobil {
                     height: 18px; 
@@ -102,8 +103,8 @@
 
             p{
                 white-space: nowrap;
-                color: (var(--color-quaternary));
                 border-radius: 10px;
+                color: (var(--color-quaternary));                
 
                 @include mobil {
                     font-size: 10px;
@@ -112,6 +113,7 @@
         } 
 
         .lessor{
+
             @include mobil {
                 display: flex;
                 flex-direction:row-reverse;
@@ -134,10 +136,10 @@
             }
            
             p{
-                font-size: 18px;
-                color: (var(--color-primary));
+                font-size: 18px;                
                 line-height: 25px;
                 padding: 10px;
+                color: (var(--color-primary));
 
                 @include mobil {
                     font-size: 12px;
@@ -172,7 +174,7 @@
                 }
             }
 
-            .star {
+            .star{
                 fill: var(--color-quinquenary);
                 height: 1em;
             }

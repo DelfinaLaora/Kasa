@@ -18,14 +18,13 @@
     }
 
     .card{
+        position: relative;
         width: 29%;
         height: 340px;
         margin: 10px;
         margin-top: 20px;
-        margin-bottom: 30px;
-        position: relative;
-        border-radius: 10px;
-        position: relative;
+        margin-bottom: 30px;        
+        border-radius: 10px;        
         
         @include mobil {
             width: 100%;
@@ -34,11 +33,11 @@
         }
 
         .background-card {
+            position: absolute;
             width: 100%;
             height: 340px;
             background: linear-gradient(180deg, rgba(255,255,255,0) 20%, rgba(0,0,0,0.5) 80%);
-            border-radius: 10px;
-            position: absolute;
+            border-radius: 10px;            
         }
     
         img{
@@ -53,6 +52,11 @@
             position: absolute;
             top: 80%;
             left: 5%;
+
+            @include tablet {
+                font-size: 15px;
+                top: 80%;
+            }
         }
     }
 }

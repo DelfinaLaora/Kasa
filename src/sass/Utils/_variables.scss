@@ -7,14 +7,24 @@
     // height: 100vh;
 }
 
-$breakpoints: (desktop: 1024px,
-               mobil: 376px);
+$breakpoints: ( desktop: 1440px,
+                tablet: 769px,
+                mobil: 376px
+               );
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
 
 @mixin mobil {
     @media screen and (max-width: map-get($breakpoints, mobil)) {
         @content;
     }
 }
+
+
 
 // @mixin desktop {
 //     @media screen and (max-width: map-get($breakpoints, desktop)) {

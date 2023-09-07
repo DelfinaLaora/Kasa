@@ -8,12 +8,16 @@
     margin-top: 10px;
     margin-bottom: 35px;
 
-    @include mobil {
+    @include tablet {
         width: 90%;
         margin-bottom: 0;
+    }
 
-        .header-logo{
-            height: 36px;
+    .header-logo{
+        height: 100%;
+
+        @include tablet {
+            height: 70%;
         }
     }
 
@@ -27,8 +31,10 @@
             text-decoration: underline;
         }
 
-        @include mobil {
-            font-size: 17px;
+        @include tablet {
+            text-transform: uppercase;
+            margin-left: 25px;
+            font-size: 12px;
         }   
     }
 }

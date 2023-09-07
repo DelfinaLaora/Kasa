@@ -1,9 +1,7 @@
-
 import arrowDropDown from "../../assets/images/arrow.png"
 import { useRef } from "react";
 import { useState } from "react"
 import PropTypes from "prop-types"
-
 function Collapse({title, text}) {
 
     const [open, setOpen] = useState(false)
@@ -37,6 +35,7 @@ function Collapse({title, text}) {
         </> 
     )
 }
+
 Collapse.propType = {
     title: PropTypes.string.isRequired,   
     text: PropTypes.string.isRequired,     

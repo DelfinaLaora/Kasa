@@ -1,5 +1,6 @@
-@include mobil {
-    .contener-about {
+.contener-about {
+    
+        @include mobil {    
             width: 100%;
             flex-direction: column;
         }

@@ -1,4 +1,3 @@
-import React from "react";
 import Collapse from "./Collapse";
 
 const description = [
@@ -27,7 +26,7 @@ function CollapseAbout() {
                           
                 {description.map((data, index) =>(
                     <Collapse
-                    key={`${data}.title}-${index}`}
+                    key={`${data}-${index}`}
                     title={data.title}
                     text= <p>{data.text}</p>
                     />

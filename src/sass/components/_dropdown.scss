@@ -19,6 +19,7 @@
             padding-left: 10px;
             padding-right: 10px;
             cursor: pointer;
+            //Pour que onglet passe au-dessus de colapse
             z-index: 1;
 
             @include mobil {
@@ -72,14 +73,16 @@
         }
     }
 }
-                 
+            
+// Pour faire pivoter la flèche de l'onglet
 .rotate{
     transform: rotate(180deg);
 }
   
 .contener-dropdown-about {
-    margin-bottom: 50px;
-
+    margin-top: 69px;
+    margin-bottom: 84px;
+    
     .dropdown {
         width: 90%;
         margin: auto;  
@@ -100,11 +103,16 @@
 
         .collapse {
             width: 99%;                  
-            margin-left: -6px;
+            margin-left: -6px;   
+
+            @include tablet {
+                width: 98%;
+                margin-left: -3px;
+             }            
 
             @include mobil {
-                width: 93%;
-                margin-left: 0;
+                width: 92%;
+                margin-left: 2px;
              }   
         }
     }
@@ -134,8 +142,13 @@
         }
         
         .collapse {    
-            width: 93%;                   
-            padding-right: 20px;      
+            width: 92%;                   
+            padding-right: 20px;   
+            
+            @include tablet {
+                width: 88%;
+                margin-left: 0;
+             }
             
             @include mobil {
                 width: 88%;

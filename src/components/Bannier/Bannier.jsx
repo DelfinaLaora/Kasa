@@ -1,5 +1,4 @@
-import pictureAbout from '../../assets/images/Image-2.png'
-
+import PropTypes from "prop-types"
 function Bannier({title, picture}){
     return(            
         <div className='bannier'>
@@ -9,6 +8,11 @@ function Bannier({title, picture}){
         </div>    
     )
 }
+
+Bannier.propType = {  
+    title: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,    
+  }
 
 export default Bannier
 

@@ -1,4 +1,3 @@
-import React from "react"
 import PropTypes from "prop-types"
 function Rating({rating}){
 
@@ -14,8 +13,10 @@ function Rating({rating}){
         </>       
     )
 }
+
 Rating.propType = {
     rating: PropTypes.string.isRequired,
 }
+
 export default Rating
 
