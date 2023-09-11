@@ -9,20 +9,18 @@ function Carousel({pictures}){
     if(pictures.length > 1){
         
         let index = currentIndex + 1    
-        // console.log(index)
-        // console.log(currentIndex)
-
-        function Previous(){    
-            setCurrentIndex((currentIndex) =>
-                currentIndex - 1 < 0 ? pictures.length - 1 : currentIndex - 1
-            );
-        };
 
         function Next(){
-            setCurrentIndex((currentIndex) =>
-                currentIndex + 1 === pictures.length ? 0 : currentIndex + 1        
+            setCurrentIndex((currentSlide) =>
+            currentSlide + 1 === pictures.length ? 0 : currentSlide + 1        
             );   
         };
+
+        function Previous(){    
+            setCurrentIndex((currentSlide) =>
+            currentSlide - 1 < 0 ? pictures.length - 1 : currentSlide - 1
+            );
+        };       
 
         return(
             <>               

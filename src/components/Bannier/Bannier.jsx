@@ -1,12 +1,20 @@
 import PropTypes from "prop-types"
 function Bannier({title, picture}){
-    return(            
-        <div className='bannier'>
-            <div className='background'></div>
-            <img  src={picture} alt='Falaise'/>   
-            <h1>{title}</h1>
-        </div>    
-    )
+
+    if(!title){
+        return(            
+            <div className='bannier'>
+                <img  src={picture} alt="Falaise"/>   
+            </div>    
+        )
+    }else{
+        return(            
+            <div className='bannier'>
+                <img  src={picture} alt="Falaise"/>                   
+                <h1>{title}</h1>
+            </div>    
+        )
+    }
 }
 
 Bannier.propType = {  
@@ -17,4 +25,3 @@ Bannier.propType = {
 export default Bannier
 
          
-            

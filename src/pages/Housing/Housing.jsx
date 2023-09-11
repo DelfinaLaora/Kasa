@@ -6,11 +6,10 @@ import Rating from '../../components/Rating/Rating'
 import Collapse from '../../components/Collapse/Collapse'
 
 function Housing() {
-
-    const params = useParams()   
+    const params = useParams()  
+    const navigate = useNavigate() 
     const [housingData, setHousingData] = useState({})
-    const [isDataLoading, setDataLoading] = useState(true)
-    const navigate = useNavigate()
+    const [isDataLoading, setDataLoading] = useState(true)    
   
     useEffect(() => {
         async function fetchData() {
@@ -29,7 +28,6 @@ function Housing() {
                   setHousingData(currentObject)
                 }
 
-                // console.log(currentObject)
             } catch (error) {
               console.log(error)
 
@@ -41,11 +39,8 @@ function Housing() {
     fetchData()
     }, [params.id, navigate])
 
-    // console.log(housingData)
     const tags = housingData.tags
-    // console.log(tags)
     const titre = Object.keys(housingData)
-    // console.log(titre)
 
     return(    
       <>
@@ -68,6 +63,7 @@ function Housing() {
                                 <div key={`${tag}-${index}`}><p>{tag}</p></div>)}
                             </div>                   
                         </div>      
+
                         <div className="lessor">                       
                             <div className="host">
                                 <p>{housingData.host.name}</p>

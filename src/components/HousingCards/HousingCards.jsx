@@ -6,7 +6,6 @@ function HousingCards() {
     const {data, error} = useFetch('/housingListings.json')
    
     const logementsList = data   
-    // console.log(logementsList)
     
     if (error) {
         return <span>Oups il y a une erreur</span>
