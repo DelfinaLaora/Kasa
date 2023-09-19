@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       { 
         // Lorsqu'une erreur est générée dans les routes enfants, 
-        // la nouvelle route sans chemin la détectera et la restituera, 
+        // erroElement la détectera et la restituera, 
         // préservant l'interface utilisateur de "root" !
         errorElement: <Error />, 
         // "index" indique au routeur de faire correspondre et de restituer 

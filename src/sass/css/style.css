@@ -339,7 +339,7 @@ li {
   color: var(--color-primary);
   text-decoration: none;
 }
-.header-contener a:hover {
+.header-contener a:active {
   text-decoration: underline;
 }
 @media screen and (max-width: 769px) {
@@ -463,7 +463,7 @@ li {
 }
 @media screen and (max-width: 376px) {
   .contener-logement .caroussel .dots {
-    top: 200px;
+    display: none;
   }
 }
 .contener-logement .card-contener-logement {

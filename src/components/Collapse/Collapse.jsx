@@ -23,14 +23,14 @@ function Collapse({title, text}) {
     return(
         <>
             <article className="dropdown">
-            <div className="onglet" onClick={Dropdown}>    
-                <span>{title}</span>
-               <div className={active ? 'rotate' : ''} ><img src={arrowDropDown} alt="arrow"/> </div> 
-            </div>
-            {/* On Passe ensuite notre objet ref comme attribut de ref au JSX du nœud DOM que l'on souhaite manipuler : */}
-            <div className="collapse" ref={contentRef} style={open ? {height: contentRef.current.scrollHeight + "px"} : {height: "0px"}} >
-                {text}
-            </div>
+                <div className="onglet" onClick={Dropdown}>    
+                    <span>{title}</span>
+                    <div className={active ? 'rotate' : ''} ><img src={arrowDropDown} alt="arrow"/> </div> 
+                </div>
+                {/* On Passe ensuite notre objet ref comme attribut de ref au JSX du nœud DOM que l'on souhaite manipuler : */}
+                <div className="collapse" ref={contentRef} style={open ? {height: contentRef.current.scrollHeight + "px"} : {height: "0px"}} >
+                    {text}
+                </div>
             </article>
         </> 
     )

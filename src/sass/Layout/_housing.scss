@@ -47,7 +47,8 @@
             color: (var(--color-quaternary));
 
             @include mobil {
-                top: 200px;
+                // top: 200px;
+                display: none;
             }
         }
     }
